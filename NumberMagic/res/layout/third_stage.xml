@@ -5,6 +5,7 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -22,5 +23,15 @@
         android:layout_marginBottom="25dp"
         android:layout_marginRight="34dp"
         android:text="Quit" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="157dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
