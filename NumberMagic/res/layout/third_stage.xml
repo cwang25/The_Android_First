@@ -25,7 +25,7 @@
         android:text="Quit" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"

@@ -20,10 +20,13 @@ public class MagicCore {
 		String tempnum = Integer.toString(number);
 		digitsTotal = 0;
 		for(int i = 0 ; i < tempnum.length() ; i++ ){
-			int temp = (int)tempnum.charAt(i);
+			char tempn = tempnum.charAt(i);
+			int temp = Character.getNumericValue(tempn);
 			digitsTotal += temp;
 		}
-		int remainder = digitsTotal/NINE;
+		int remainder = digitsTotal%NINE;
+		int times = digitsTotal/NINE;
+		int expected = NINE*(times + 1);
 		if(remainder == 0){
 			if(even){
 				answer = 0;
@@ -31,7 +34,7 @@ public class MagicCore {
 				answer = 9;
 			}
 		} else {
-			answer = NINE - remainder;
+			answer = expected - digitsTotal;
 		}
 		
 	}
