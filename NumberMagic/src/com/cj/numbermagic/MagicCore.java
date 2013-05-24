@@ -45,5 +45,9 @@ public class MagicCore {
 	public int getAnswer(){
 		return answer;
 	}
+	
+	public boolean getEven(){
+		return even;
+	}
 
 }
