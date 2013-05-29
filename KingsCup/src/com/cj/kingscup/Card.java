@@ -56,9 +56,11 @@ public class Card implements Comparable {
   *@param suit The suit of the card.
   */
   public Card(int value, char suit){
-    if((value > HIGHEST_VALUE || value < LOWEST_VALUE)|| (suit != 'c'&& suit != 'd' &&
-    suit !='s' && suit != 'h')){
-      throw new IllegalArgumentException();
+    if((value > HIGHEST_VALUE || value < LOWEST_VALUE)){
+      throw new IllegalArgumentException("Invalid value");
+    }
+    if(suit != 'c'&& suit != 'd' && suit !='s' && suit != 'h') {
+      throw new IllegalArgumentException("Invalid suit");
     }
     this.value = value;
     this.suit = suit;
@@ -80,7 +82,7 @@ public class Card implements Comparable {
   public String toString(){
     String s = "";
     s+=suit;
-	s+=value;
+	  s+=value;
     return s;
   
   }
@@ -89,7 +91,7 @@ public class Card implements Comparable {
   */
   public static void main (String[] args){
     Card hand = new Card ( 13, CLUBS);
-	System.out.println(hand.toString());
+	  System.out.println(hand.toString());
   
   
   }
