@@ -11,7 +11,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
-        android:text="Next Card" />
+        android:text="@string/button_next_card" />
 
     <Button
         android:id="@+id/restart"
@@ -21,7 +21,7 @@
         android:layout_alignBottom="@+id/nextcard"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
-        android:text="Restart" />
+        android:text="@string/button_restart" />
 
     <TextView
         android:id="@+id/cardrule"
@@ -31,7 +31,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="20dp"
-        android:text="Card&apos;s Rule"
+        android:text="@string/cards_rule"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
@@ -42,6 +42,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        android:src="@drawable/spade0" />
+        android:src="@drawable/spade0" android:contentDescription="@string/card_description"/>
 
 </RelativeLayout>

@@ -4,5 +4,9 @@
     <string name="app_name">KingsCup</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="cards_rule">Card\'s Rule</string>
+    <string name="card_description">Card from a standard deck.</string>
+    <string name="button_restart">Restart</string>
+    <string name="button_next_card">Next Card</string>
 
 </resources>
