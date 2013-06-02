@@ -63,7 +63,7 @@ public class Card {
 		this.suit = suit;
 		this.rule = rule;
 	}
-
+	
 	/**
 	 * This method will offer the suit of the card.
 	 */
@@ -79,6 +79,7 @@ public class Card {
 		return value;
 
 	}
+
 
 	/**
 	 * This method will transform the card object into the string format.
