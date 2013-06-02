@@ -43,7 +43,7 @@ public class Card {
 	 * The instance field of rule.
 	 */
 	private String rule;
-
+	
 	/**
 	 * This method will generate a card object.
 	 * 
