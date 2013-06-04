@@ -2,7 +2,7 @@ package com.cj.kingscup;
 
 import java.util.Random;
 
-/**
+/**	
  * The main system class that will hold mostly the all game's functions here. Then let MainActivity class to call the method that will interact with user.
  * @author Chi-Han Wang
  * @author Jonathan Poston
@@ -29,6 +29,7 @@ public class KingsCupSystem {
 	 * The object of the system, start on the whole system.
 	 */
 	public KingsCupSystem(){
+		index = 0;
 		deck = new Card[CARDS_IN_DECK];
 		for(int i =0; i<CARDS_IN_DECK;i++){
 			//Create new card
@@ -45,8 +46,11 @@ public class KingsCupSystem {
 	 * shuffle the deck, which also means restart the game.
 	 */
 	public void shuffle(){
+		//Create a new Random number generator
 		Random rand = new Random();
+		//swap cards at random places shuffle_swaps number of times
 		for(int i = 0 ; i < shuffle_swaps ; i ++){
+			//pick two random numbers 
 			swap(rand.nextInt(CARDS_IN_DECK-1),rand.nextInt(CARDS_IN_DECK-1));
 		}
 		index = 0;
@@ -64,4 +68,8 @@ public class KingsCupSystem {
 	/**
 	 * Gets the next card
 	 */
+	public Card getNextCard(){
+		return deck[index++];
+		
+	}
 }
