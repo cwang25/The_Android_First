@@ -7,6 +7,8 @@ package com.cj.kingscup;
  * @author Jonathan Poston
  */
 public class Card {
+	//Possibly could use an enum for suits? Not sure it would work. 
+//	public enum suits{CLUBS,DIAMONDS,SPADES,HEARTS};
 	/**
 	 * The class constant of Clubs.
 	 */
@@ -45,6 +47,11 @@ public class Card {
 	private String rule;
 
 	/**
+	 * R.drawable value of the image for the card
+	 */
+	private int rdrawable;
+
+	/**
 	 * This method will generate a card object.
 	 * 
 	 * @param value
@@ -62,6 +69,34 @@ public class Card {
 		this.value = value;
 		this.suit = suit;
 		this.rule = rule;
+	}
+
+	/**
+	 * @return the rdrawable
+	 */
+	public int getRdrawable() {
+		return rdrawable;
+	}
+
+	/**
+	 * @param rdrawable the rdrawable to set
+	 */
+	public void setRdrawable(int rdrawable) {
+		this.rdrawable = rdrawable;
+	}
+
+	/**
+	 * @param value the value to set
+	 */
+	public void setValue(int value) {
+		this.value = value;
+	}
+
+	/**
+	 * @param suit the suit to set
+	 */
+	public void setSuit(char suit) {
+		this.suit = suit;
 	}
 
 	/**
