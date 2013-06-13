@@ -73,10 +73,15 @@ public class MainActivity extends Activity implements OnClickListener{
     public void oddOrEvenStage(){
     	String stringinput = input.getText().toString();
     	try{
+        Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.animator.fadein);
         inputnumber = Integer.parseInt(stringinput);
         setContentView(R.layout.second_stage);
+    	TextView text2 = (TextView)this.findViewById(R.id.textView1);
+        text2.setAnimation(fadeInAnimation);
 		oddbutton = (Button)this.findViewById(R.id.odd);
         evenbutton = (Button)this.findViewById(R.id.even);
+        oddbutton.setAnimation(fadeInAnimation);
+        evenbutton.setAnimation(fadeInAnimation);
         oddbutton.setOnClickListener((OnClickListener) this);
         evenbutton.setOnClickListener((OnClickListener) this);
     	} catch(NumberFormatException e){
@@ -102,6 +107,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.animator.fadeinforanswer);
 		answerNumber.setAnimation(fadeInAnimation);
 		answer.setAnimation(fadeInAnimation);
+		quitbutton.setAnimation(fadeInAnimation);
+		restart.setAnimation(fadeInAnimation);
     }
     
     public void setImage(int answer){

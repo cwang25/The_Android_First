@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="22dp"
         android:text="Let me ask you a question, is your megic secret number a odd number or even number?"
-        android:textSize="20dp" />
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/even"
