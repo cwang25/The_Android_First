@@ -2,8 +2,12 @@ package com.cj.kingscup;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.Fragment;
 import android.graphics.drawable.Drawable;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 
 public class MainActivity extends Activity {
@@ -11,7 +15,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.gamescreen);
 	}
 
 	@Override
@@ -31,5 +35,24 @@ public class MainActivity extends Activity {
 		// the card parameter
 		//perhaps we should put the R.... in the database to make it simple?
 		imgview.setImageDrawable(drawable);
+	}
+	
+	
+	
+	// I added some inner classes  for card flips.  Since it requires some multiple layouts and activity classes.
+	// 06/13
+	
+	public class CardFrontFragment extends Fragment{
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+			return inflater.inflate(R.drawable.club12, container, false);
+		}
+	}
+	
+	public class CardBackFragment extends Fragment{
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+			return inflater.inflate(R.drawable.club0, container, false);
+		}
 	}
 }
